@@ -5,12 +5,12 @@ import heapq
 def parallel_processing(n, m, data):
     output = []
     #  write the function for simulating parallel tasks
-    mytrea=[(0,j)for j in range(n)]
+    mytrea=[(0,j) for j in range(n)]
     heapq.heapify(mytrea)
     # create the output pairs
     for j, r in enumerate(data):
         termlaiks, source = heapq.heappop(mytrea)
-        output.append(source, termlaiks)
+        output.append((source, termlaiks))
         heapq.heappush(mytrea,(termlaiks+r, source))
     return output
 
