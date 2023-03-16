@@ -1,5 +1,4 @@
 # python3  Elīza Mača RDCP0.grupa
-
 import heapq
 
 def parallel_processing(n, m, data):
@@ -18,8 +17,7 @@ def main():
     # create input from keyboard
     # input consists of two lines
     # first line - n and m
-    n=map(int,input().split())
-    m=map(int,input().split())
+    n,m=map(int,input().split())
     # n - thread count and m - job count
     # second line - data 
     data=list(map(int,input().split()))
