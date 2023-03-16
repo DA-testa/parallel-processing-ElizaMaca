@@ -1,4 +1,4 @@
-# python3
+# python3  Elīza Mača RDCP0.grupa
 
 import heapq
 
@@ -9,19 +9,18 @@ def parallel_processing(n, m, data):
     heapq.heapify(mytrea)
     # create the output pairs
     for j, r in enumerate(data):
-        termlaiks, source = heapq.heappop(mytrea)
-        output.append((source, termlaiks))
-        heapq.heappush(mytrea,(termlaiks+r, source))
+        izpildeslaiks, source = heapq.heappop(mytrea)
+        output.append((source, izpildeslaiks))
+        heapq.heappush(mytrea,(izpildeslaiks+r, source))
     return output
 
 def main():
     # create input from keyboard
     # input consists of two lines
-    #m=map(int,input().split())
     # first line - n and m
-    n,m=map(int,input().split())
-    # n - thread count 
-    # m - job count
+    n=map(int,input().split())
+    m=map(int,input().split())
+    # n - thread count and m - job count
     # second line - data 
     data=list(map(int,input().split()))
     # data - contains m integers t(i) - the times in seconds it takes any thread to process i-th job
